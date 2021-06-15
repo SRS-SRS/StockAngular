@@ -1,0 +1,20 @@
+<!-- <p *ngFor="let item of data">Iva: {{ item.iva }}, Pvp : {{ item.pvp }}</p> -->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Iva</th>
+      <th scope="col">Pvp</th>
+      <th scope="col">Discount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <th scope="row">{{ product.id }}</th>
+      <td>{{ product.iva }}</td>
+      <td>{{ product.pvp }}</td>
+      <td>{{ product.discount }}</td>
+    </tr>
+  </tbody>
+</table>

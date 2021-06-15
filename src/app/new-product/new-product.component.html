@@ -1,0 +1,47 @@
+<h1>{{ title }}</h1>
+
+<!-- <div class="form-group">
+  <label for="power">Hero Power</label>
+  <select class="form-control" id="power" required>
+    <option *ngFor="let pow of powers" [value]="pow">{{ pow }}</option>
+    <!-- value é um atributo necessário da tag option 
+  </select>
+</div> -->
+<form [formGroup]="productForm">
+  <div class="mb-3">
+    <label for="inputIva" class="form-label">IVA</label>
+    <input
+      formControlName="iva"
+      type="number"
+      class="form-control"
+      id="inputIva"
+      placeholder="Enter Iva"
+      aria-describedby="EmailHelp"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="inputPvp" class="form-label">PVP</label>
+    <input
+      formControlName="pvp"
+      type="number"
+      class="form-control"
+      id="inputPvp"
+      placeholder="Enter Pvp"
+      aria-describedby="EmailHelp"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="inputDiscount" class="form-label">DISCOUNT</label>
+    <input
+      formControlName="discount"
+      type="number"
+      class="form-control"
+      id="inputDiscount"
+      placeholder="Enter discount"
+      aria-describedby="EmailHelp"
+    />
+  </div>
+  <button class="btn btn-primary" (click)="createProduct()">Submit</button>
+</form>
+
+<p>{{ productValue }}</p>
